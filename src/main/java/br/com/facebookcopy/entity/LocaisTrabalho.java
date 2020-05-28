@@ -67,9 +67,8 @@ public class LocaisTrabalho {
 	@Column(name = "bl_trabalho_atual")
 	private Boolean trabalhoAtual;
 	
-	@Getter
 	@Setter
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn(name = "id_perfil")
 	private Perfis perfil;
 	

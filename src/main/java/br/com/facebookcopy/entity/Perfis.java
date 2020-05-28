@@ -56,7 +56,6 @@ public class Perfis {
 	@Column(name = "dt_registro")
 	private Date dataRegistro;
 	
-	@Setter
 	@Getter
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "perfil")
 	private List<LocaisTrabalho> locaisTrabalho;
