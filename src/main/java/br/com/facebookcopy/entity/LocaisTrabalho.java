@@ -67,9 +67,8 @@ public class LocaisTrabalho {
 	@Column(name = "bl_trabalho_atual")
 	private Boolean trabalhoAtual;
 	
-	@Setter
 	@ManyToOne
-	@JoinColumn(name = "id_perfil")
+	@JoinColumn(name = "id_perfil", updatable = false)
 	private Perfis perfil;
 	
 	@Getter

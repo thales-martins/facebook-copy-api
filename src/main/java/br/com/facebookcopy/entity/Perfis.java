@@ -4,11 +4,13 @@ import java.sql.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -56,7 +58,9 @@ public class Perfis {
 	@Column(name = "dt_registro")
 	private Date dataRegistro;
 	
+	@Setter
 	@Getter
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "perfil")
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "id_perfil")
 	private List<LocaisTrabalho> locaisTrabalho;
 }
