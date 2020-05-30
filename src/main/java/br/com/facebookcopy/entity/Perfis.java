@@ -60,4 +60,8 @@ public class Perfis {
 	@Getter
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "perfil", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<LocaisTrabalho> locaisTrabalho;
+	
+	@Getter
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "perfil", cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private List<InstituicoesEnsino> instituicoesEnsino;
 }
