@@ -28,12 +28,10 @@ public class NiveisPrivacidade {
 	private UUID id;
 
 	@Getter
-	@Setter
 	@Column(name = "tx_privacidade")
 	private String privacidade;
 	
 	@Getter
-	@Setter
 	@Column(name = "tx_descricao")
 	private String descricao;
 }

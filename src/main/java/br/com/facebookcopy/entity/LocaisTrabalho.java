@@ -3,6 +3,7 @@ package br.com.facebookcopy.entity;
 import java.sql.Date;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -67,8 +68,9 @@ public class LocaisTrabalho {
 	@Column(name = "bl_trabalho_atual")
 	private Boolean trabalhoAtual;
 	
+	@Setter
 	@ManyToOne
-	@JoinColumn(name = "id_perfil", updatable = false)
+	@JoinColumn(name = "id_perfil")
 	private Perfis perfil;
 	
 	@Getter
